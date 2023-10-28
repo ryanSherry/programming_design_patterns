@@ -3,8 +3,13 @@
  */
 package java_projects.strategy_pattern.good_design.duck_example;
 
+import java_projects.strategy_pattern.good_design.duck_example.adapter_pattern.Drone;
+import java_projects.strategy_pattern.good_design.duck_example.adapter_pattern.DroneAdapter;
+import java_projects.strategy_pattern.good_design.duck_example.adapter_pattern.SuperDrone;
+import java_projects.strategy_pattern.good_design.duck_example.adapter_pattern.Turkey;
+import java_projects.strategy_pattern.good_design.duck_example.adapter_pattern.TurkeyAdapter;
+import java_projects.strategy_pattern.good_design.duck_example.adapter_pattern.WildTurkey;
 import java_projects.strategy_pattern.good_design.duck_example.duck.Duck;
-import java_projects.strategy_pattern.good_design.duck_example.duck.MallardDuck;
 
 public class DuckSimulator {
 
@@ -15,6 +20,10 @@ public class DuckSimulator {
       Turkey turkey = new WildTurkey();
       Duck turkeyAdapter = new TurkeyAdapter(turkey);
       testDuck(turkeyAdapter);
+      Drone drone = new SuperDrone();
+      Duck droneAdapter = new DroneAdapter(drone);
+      droneAdapter.performFlight();
+      droneAdapter.performQuack();
     }
     static void testDuck(Duck duck) {
       duck.performQuack();

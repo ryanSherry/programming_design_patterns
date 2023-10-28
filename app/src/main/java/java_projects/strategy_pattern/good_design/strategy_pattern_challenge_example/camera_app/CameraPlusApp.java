@@ -1,7 +1,7 @@
-package java_projects.strategy_pattern.good_design.challenge_example.camera_app;
+package java_projects.strategy_pattern.good_design.strategy_pattern_challenge_example.camera_app;
 
-import java_projects.strategy_pattern.good_design.challenge_example.share_behavior.CameraPlusShareBehavior;
-import java_projects.strategy_pattern.good_design.challenge_example.share_behavior.ShareBehavior;
+import java_projects.strategy_pattern.good_design.strategy_pattern_challenge_example.share_behavior.CameraPlusShareBehavior;
+import java_projects.strategy_pattern.good_design.strategy_pattern_challenge_example.share_behavior.ShareBehavior;
 
 public class CameraPlusApp extends PhoneCameraApp {
   ShareBehavior cameraPlusShareBehavior = new CameraPlusShareBehavior();
